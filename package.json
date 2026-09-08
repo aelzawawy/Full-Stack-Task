@@ -1,0 +1,17 @@
+{
+  "name": "auth-core",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready full-stack authentication system with React 19, NestJS, and MongoDB",
+  "scripts": {
+    "dev": "./dev.sh",
+    "start": "./dev.sh",
+    "db:start": "docker start mongo-auth 2>/dev/null || docker compose up -d",
+    "db:stop": "docker stop mongo-auth 2>/dev/null || docker compose down",
+    "backend:dev": "pnpm --dir backend run start:dev",
+    "frontend:dev": "pnpm --dir frontend run dev",
+    "test": "pnpm --dir backend run test && pnpm --dir frontend run test",
+    "lint": "pnpm --dir backend run lint && pnpm --dir frontend run lint",
+    "build": "pnpm --dir backend run build && pnpm --dir frontend run build"
+  }
+}
