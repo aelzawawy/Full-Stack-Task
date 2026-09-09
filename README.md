@@ -42,25 +42,31 @@ Full-Stack-Task/
 │   ├── src/
 │   │   ├── auth/                # Auth module (controller, service, DTOs, guards, strategy)
 │   │   ├── users/               # Users module (service, Mongoose schema)
-│   │   ├── common/              # Global exception filter, decorators
-│   │   ├── app.module.ts
-│   │   └── main.ts              # App bootstrap with CORS, Swagger, ValidationPipe
-│   ├── test/
+│   │   ├── common/              # Global exception filter, decorators (@CurrentUser)
+│   │   ├── app.module.ts        # Core module configuring Mongoose & Throttler rate limiting
+│   │   └── main.ts              # App bootstrap with CORS, Swagger docs, ValidationPipe
+│   ├── test/                    # End-to-end (e2e) tests
+│   ├── vitest.config.ts         # Vitest unit test configuration
 │   ├── .env.example
 │   └── package.json
 ├── frontend/                    # Vite + React 19 + TypeScript frontend
+│   ├── public/                  # Static assets & SVG icons
 │   ├── src/
-│   │   ├── components/          # Reusable UI inputs, buttons, banners, protected route
-│   │   ├── context/             # AuthContext & AuthProvider
-│   │   ├── hooks/               # useAuth, useAuthForm
-│   │   ├── pages/               # SignupPage, SigninPage, DashboardPage
-│   │   ├── services/            # Native fetch apiClient
-│   │   ├── types/               # TypeScript interfaces
-│   │   ├── App.tsx
-│   │   └── index.css            # Tailwind CSS v4 styling
+│   │   ├── components/          # UI primitives (Button, InputField, AlertBanner, ProtectedRoute)
+│   │   ├── context/             # AuthContext (session state) & RouterContext (URL routing)
+│   │   ├── hooks/               # useAuth, useAuthForm (validation), useRouter
+│   │   ├── pages/               # SignupPage, SigninPage, DashboardPage, NotFoundPage (404)
+│   │   ├── services/            # Native fetch apiClient with Bearer auth handling
+│   │   ├── test/                # Vitest test setup and unit test suites
+│   │   ├── types/               # TypeScript interfaces & API response contracts
+│   │   ├── App.tsx              # Root shell with layout, ambient animations & routing
+│   │   └── index.css            # Tailwind CSS v4 styling & design tokens
+│   ├── vitest.config.ts         # Frontend test runner config
 │   ├── .env.example
 │   └── package.json
+├── dev.sh                       # Unified startup script (Docker + backend + frontend)
 ├── docker-compose.yml           # Local MongoDB container setup
+├── package.json                 # Root workspace scripts (pnpm dev, pnpm test, pnpm lint)
 ├── AI.md                        # AI usage, prompt log, and engineering overrides
 └── README.md
 ```
