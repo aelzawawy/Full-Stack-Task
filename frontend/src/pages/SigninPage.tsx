@@ -63,17 +63,14 @@ export const SigninPage = ({
 
   return (
     <div className="w-full max-w-md mx-auto p-7 sm:p-9 glass-panel rounded-3xl relative overflow-hidden transition-all duration-300">
-      {/* Top subtle glow accent line */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent"></div>
-
       <div className="mb-7 text-center">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl neu-raised-sm mb-3.5 text-indigo-400 border border-white/5">
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#e0829d]/10 border border-[#e0829d]/25 mb-3.5 text-[#e0829d] shadow-[0_0_15px_rgba(224,130,157,0.2)]">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
           </svg>
         </div>
         <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Welcome Back</h2>
-        <p className="text-sm text-slate-400 mt-1.5">Sign in to your secure workspace</p>
+        <p className="text-sm text-[#dac4d0]/80 mt-1.5">Sign in to your secure workspace</p>
       </div>
 
       {serverError && (
@@ -123,12 +120,12 @@ export const SigninPage = ({
         </Button>
       </form>
 
-      <div className="mt-7 pt-5 border-t border-white/5 text-center text-sm text-slate-400">
+      <div className="mt-7 pt-5 border-t border-[#dac4d0]/10 text-center text-sm text-[#dac4d0]/70">
         Don't have an account?{' '}
         <button
           type="button"
           onClick={onNavigateToSignup}
-          className="font-semibold text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer hover:underline"
+          className="font-semibold text-[#e0829d] hover:text-[#e895ac] transition-colors cursor-pointer hover:underline"
         >
           Sign Up
         </button>

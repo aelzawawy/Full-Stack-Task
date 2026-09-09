@@ -30,8 +30,8 @@ function MainContent() {
   if (isLoading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh]">
-        <div className="animate-spin rounded-full h-12 w-12 border-4 border-indigo-500 border-t-transparent shadow-[0_0_20px_rgba(99,102,241,0.5)]"></div>
-        <p className="mt-4 text-sm font-medium text-slate-400">Initializing session...</p>
+        <div className="animate-spin rounded-full h-11 w-11 border-3 border-[#e0829d] border-t-transparent shadow-[0_0_20px_rgba(224,130,157,0.3)]"></div>
+        <p className="mt-4 text-sm font-medium text-[#dac4d0]/80">Initializing session...</p>
       </div>
     );
   }
@@ -75,14 +75,14 @@ function HeaderBar() {
         onClick={() => navigate(isAuthenticated ? '/dashboard' : '/signin')}
         className="flex items-center gap-3 cursor-pointer group"
       >
-        <div className="w-9 h-9 rounded-xl neu-raised flex items-center justify-center text-indigo-400 font-bold text-base border border-white/10 shadow-[0_0_15px_rgba(99,102,241,0.3)] group-hover:scale-105 transition-transform">
+        <div className="w-9 h-9 rounded-xl bg-[#e0829d]/10 border border-[#e0829d]/30 flex items-center justify-center text-[#e0829d] font-bold text-base shadow-[0_0_12px_rgba(224,130,157,0.2)] group-hover:border-[#e0829d]/50 group-hover:scale-105 transition-all">
           A
         </div>
         <div>
           <h1 className="text-base font-bold text-white tracking-tight leading-tight flex items-center gap-2">
             AuthCore
           </h1>
-          <p className="text-[11px] text-slate-400 font-medium">React 19 + NestJS + MongoDB</p>
+          <p className="text-[11px] text-[#dac4d0]/80 font-medium">React 19 + NestJS + MongoDB</p>
         </div>
       </div>
     </header>
@@ -93,11 +93,11 @@ export default function App() {
   return (
     <AuthProvider>
       <RouterProvider>
-        <div className="min-h-screen bg-[#0b0f19] text-slate-100 flex flex-col justify-between relative overflow-x-hidden selection:bg-indigo-500/30 selection:text-indigo-200">
-          {/* Ambient Glowing Background Orbs for Glass Refraction */}
-          <div className="fixed top-12 left-[-5%] w-[420px] h-[420px] bg-indigo-600/15 rounded-full blur-[110px] pointer-events-none animate-float-slow -z-10" />
-          <div className="fixed top-1/3 right-[-5%] w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[110px] pointer-events-none animate-float-reverse -z-10" />
-          <div className="fixed bottom-[-5%] left-1/3 w-[450px] h-[450px] bg-cyan-600/10 rounded-full blur-[130px] pointer-events-none -z-10" />
+        <div className="min-h-screen bg-[#0d1e1a] text-slate-100 flex flex-col justify-between relative overflow-x-hidden selection:bg-[#e0829d]/30 selection:text-[#f7eff4]">
+          {/* Ambient Floating Blurred Orbs Behind Panel */}
+          <div className="fixed top-[20%] left-[8%] w-[480px] h-[480px] bg-[#036264]/22 rounded-full blur-[130px] pointer-events-none animate-float-slow" />
+          <div className="fixed top-[30%] right-[8%] w-[440px] h-[440px] bg-[#8f5774]/20 rounded-full blur-[130px] pointer-events-none animate-float-reverse" />
+          <div className="fixed bottom-[12%] left-[28%] w-[420px] h-[420px] bg-[#e0829d]/14 rounded-full blur-[140px] pointer-events-none animate-float-gentle" />
 
           {/* Top Navbar */}
           <HeaderBar />
@@ -108,7 +108,7 @@ export default function App() {
           </main>
 
           {/* Footer */}
-          <footer className="w-full py-4 text-center text-xs text-slate-500 glass-footer">
+          <footer className="w-full py-4 text-center text-xs text-[#dac4d0]/60 glass-footer">
             Production-Ready Full Stack Authentication • Built with React 19, TypeScript, and NestJS
           </footer>
         </div>

@@ -20,18 +20,18 @@ export const InputField = ({
 
   return (
     <div className="flex flex-col gap-1.5 w-full text-left">
-      <label htmlFor={inputId} className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+      <label htmlFor={inputId} className="text-xs font-semibold uppercase tracking-wider text-[#dac4d0]">
         {label}
       </label>
       <input
         id={inputId}
         name={name}
         aria-invalid={showError}
-        className={`neu-inset w-full px-4 py-3 rounded-xl text-sm text-slate-100 transition-all duration-200 outline-none
-          placeholder:text-slate-500 disabled:opacity-50 disabled:cursor-not-allowed
+        className={`neu-inset w-full px-4 py-2.5 rounded-xl text-sm text-[#f5edf2] transition-all duration-150 outline-none
+          placeholder:text-[#dac4d0]/40 disabled:opacity-50 disabled:cursor-not-allowed
           ${
             showError
-              ? 'border-rose-500/80 bg-rose-950/30 text-rose-100 shadow-[inset_2px_2px_5px_rgba(0,0,0,0.7),0_0_12px_rgba(244,63,94,0.35)]'
+              ? 'border-rose-500/80 bg-rose-950/20 text-rose-100 focus:border-rose-500 focus:ring-rose-500/20'
               : ''
           } ${className}`}
         {...props}

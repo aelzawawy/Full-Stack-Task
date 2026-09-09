@@ -14,12 +14,12 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const baseClasses =
-    'inline-flex items-center justify-center font-semibold rounded-xl text-sm px-5 py-2.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-950 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer select-none';
+    'inline-flex items-center justify-center font-semibold rounded-xl text-sm px-5 py-2.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0d1e1a] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer select-none';
 
   const variantClasses = {
-    primary: 'neu-btn-primary text-white focus:ring-indigo-500',
-    secondary: 'neu-btn-secondary text-slate-200 focus:ring-slate-500',
-    danger: 'neu-btn-danger text-white focus:ring-rose-500',
+    primary: 'neu-btn-primary text-[#0f2b25] focus:ring-[#e0829d]',
+    secondary: 'neu-btn-secondary text-[#dac4d0] focus:ring-[#036264]',
+    danger: 'neu-btn-danger text-[#f5b6c7] focus:ring-[#8f5774]',
   };
 
   return (

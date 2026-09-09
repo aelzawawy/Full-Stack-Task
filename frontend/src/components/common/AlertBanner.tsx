@@ -14,13 +14,13 @@ export const AlertBanner = ({
   const styles = {
     error: 'bg-rose-950/40 border-rose-500/30 text-rose-200 shadow-[0_4px_12px_rgba(244,63,94,0.15)]',
     success: 'bg-emerald-950/40 border-emerald-500/30 text-emerald-200 shadow-[0_4px_12px_rgba(16,185,129,0.15)]',
-    info: 'bg-sky-950/40 border-sky-500/30 text-sky-200 shadow-[0_4px_12px_rgba(14,165,233,0.15)]',
+    info: 'bg-[#036264]/25 border-[#036264]/50 text-[#d0f4f2] shadow-[0_4px_12px_rgba(3,98,100,0.2)]',
   };
 
   const iconColors = {
     error: 'text-rose-400',
     success: 'text-emerald-400',
-    info: 'text-sky-400',
+    info: 'text-[#7de5de]',
   };
 
   return (
